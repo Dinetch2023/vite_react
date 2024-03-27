@@ -14,7 +14,11 @@ function PockemonCard() {
  
   return (
     <figure>
+<<<<<<< HEAD
       {pokemon.imgSRC ? <img src={pokemon.imgSrc}/> : <p/> ??? <p/> }
+=======
+      {pokemon.imgSRC !== undefined ? <img src={pokemon.imgSrc}/> : <p/> ??? <p/> }
+>>>>>>> 67ee3e92e1666b00f829dd6361990c1a22c5cd8c
       <figcaption>{pokemon.name}</figcaption>
     </figure>
     );
