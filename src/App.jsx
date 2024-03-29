@@ -1,4 +1,4 @@
-import PockemonCard from "./components/PokemonCard";
+import PokemonCard from "./components/PokemonCard";
 
 const pokemonList = [
   {
@@ -14,7 +14,7 @@ const pokemonList = [
 function App() {
   return (
     <>
-      <PockemonCard pokemon={pokemonList[0]} />
+      <PokemonCard pokemon={pokemonList[0]} />
     </>
   );
 }
