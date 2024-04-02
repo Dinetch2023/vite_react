@@ -1,22 +1,15 @@
-function NavBar({
-  pokemonIndex,
-  pokemonList,
-  handleClickPrevious,
-  handleClickNext,
-}) {
+import PokemonCard from "./PokemonCard";
+
+function NavBar() {
   return (
     <>
-      {pokemonIndex > 0 ? (
-        <button onClick={handleClickPrevious}>Précédent</button>
-      ) : (
-        ""
-      )}
-
-      {pokemonIndex < pokemonList.length - 1 ? (
-        <button onClick={handleClickNext}>Suivant</button>
-      ) : (
-        ""
-      )}
+      {pokemonList.map((pokemon) => (
+        <PokemonCard
+          key={pokemon.name}
+          name={pokemon.name}
+          imgSrc={pokemon.imgSrc}
+        />
+      ))}
     </>
   );
 }
