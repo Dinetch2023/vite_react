@@ -1,17 +1,12 @@
-import PokemonCard from "./PokemonCard";
-
-function NavBar() {
+function NavBar({ pokemonList, pokemonClick }) {
   return (
     <>
-      {pokemonList.map((pokemon) => (
-        <PokemonCard
-          key={pokemon.name}
-          name={pokemon.name}
-          imgSrc={pokemon.imgSrc}
-        />
+      {pokemonList.map((pokemon, index) => (
+        <button onClick={() => pokemonClick(pokemon)} key={index}>
+          {pokemon.name}
+        </button>
       ))}
     </>
   );
 }
-
 export default NavBar;
